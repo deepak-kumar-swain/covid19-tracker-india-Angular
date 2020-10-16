@@ -1,0 +1,65 @@
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+.red1 {color: #ff073a;}
+.red2 {color: rgba(255,7,58,.6);}
+
+.blue1 {color: #007bff;}
+.blue2 {color: rgba(0,123,255,.6);}
+
+.green1 {color: #28a745;}
+.green2 {color: rgba(40,167,69,.6);}
+
+.grey1 {color: #6c757d;}
+.grey2 {color: rgba(108,117,125,.6);}
+
+.closePad {
+  padding: 45px 3px; border-radius: 9px; cursor: pointer;
+}
+
+.cardsSymmetric {
+  padding: 0 27px;
+}
+
+.conformBackground {
+  background: rgba(255, 7, 58, 0.125);
+  transition: background .5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 0 16px 81px 0 rgba(255, 7, 58, 0.125);
+}
+.activeBackground {
+  background: rgba(0, 123, 255, 0.125);
+  transition: background .5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 0 16px 81px 0 rgba(0, 123, 255, 0.125);
+}
+.recoveredBackground {
+  background: rgba(40, 167, 69, 0.125);
+  transition: background .5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 0 16px 81px 0 rgba(40, 167, 69, 0.125);
+}
+.deceasedBackground {
+  background: rgba(108, 117, 125, 0.125);
+  transition: background .5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 0 16px 81px 0 rgba(108, 117, 125, 0.125);
+}
+.allCountryDataContainer {
+  max-height: 63vh;
+  overflow-y: scroll;
+}
+.allUpdatesDataContainer {
+  max-height: 36vh;
+  overflow-y: scroll;
+  div {
+    padding: 18px;
+    background: #f6f6f6;
+    border-radius: 9px;
+    margin-bottom: 9px;
+    p:last-child {
+      color: #a2a2a2;
+    }
+  }
+}
