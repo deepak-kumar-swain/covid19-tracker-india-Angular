@@ -1,4 +1,5 @@
-import {Component, HostBinding} from '@angular/core';
+import {Component} from '@angular/core';
+import {Platform} from '@angular/cdk/platform';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import {Component, HostBinding} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(public platform: Platform) {}
   isDarkTheme = true;
 }

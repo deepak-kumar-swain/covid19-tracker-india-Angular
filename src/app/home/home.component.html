@@ -2,8 +2,8 @@
   <div class="container-fluid mt-5">
     <div class="row">
       <div class="col-sm-5">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="3px" class="cardsSymmetric">
-          <div fxFlex>
+        <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="3px" fxLayoutGap.xs="0px" class="cardsSymmetric">
+          <div fxFlex fxFlex.xs="50%">
             <div class="text-center closePad" [ngClass]="{'conformBackground': isActiveConfirmed}"
                  (click)="selectSection(1)">
               <p class="font13 red1 weight500">Confirmed</p>
@@ -11,7 +11,7 @@
               <p class="weight700 font24 red1">{{confirmedTotal}}</p>
             </div>
           </div>
-          <div fxFlex>
+          <div fxFlex fxFlex.xs="50%">
             <div class="text-center closePad" [ngClass]="{'activeBackground': isActiveActive}"
                  (click)="selectSection(2)">
               <p class="font13 blue1 weight500">Active</p>
@@ -19,7 +19,7 @@
               <p class="weight700 font24 blue1">{{activeTotal}}</p>
             </div>
           </div>
-          <div fxFlex>
+          <div fxFlex fxFlex.xs="50%">
             <div class="text-center closePad" [ngClass]="{'recoveredBackground': isActiveRecovered}"
                  (click)="selectSection(3)">
               <p class="font13 green1 weight500">Recovered</p>
@@ -27,7 +27,7 @@
               <p class="weight700 font24 green1">{{recoveredTotal}}</p>
             </div>
           </div>
-          <div fxFlex>
+          <div fxFlex fxFlex.xs="50%">
             <div class="text-center closePad" [ngClass]="{'deceasedBackground': isActiveDeceased}"
                  (click)="selectSection(4)">
               <p class="font13 grey1 weight500">Deceased</p>
@@ -36,7 +36,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-5">
+        <div class="mt-5" [ngClass]="{'mt-2': platform.ANDROID || platform.IOS, 'mt-5': !platform.ANDROID && !platform.IOS}">
           <google-chart
             *ngIf="mapReady"
             [data]="geoChart"

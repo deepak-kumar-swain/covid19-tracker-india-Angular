@@ -1,7 +1,9 @@
 <section>
-  <mat-toolbar>
-    <span><img src="../assets/logo.png" alt="Covid 19 Tracker India - Deepak" class="mainLogo">&nbsp; <span>COVID-19 Tracker (INDIA)</span></span>
-    <span class="example-spacer"></span>
-  </mat-toolbar>
+  <div class="text-center pt-3" *ngIf="platform.ANDROID || platform.IOS">
+    <img src="../assets/logo.png" alt="Covid 19 Tracker India - Deepak" class="mainLogo"/>&nbsp; <br><span class="font21">COVID-19 Tracker (INDIA)</span>
+  </div>
+  <div class="p-3" *ngIf="!platform.ANDROID && !platform.IOS">
+    <img src="../assets/logo.png" alt="Covid 19 Tracker India - Deepak" class="mainLogo"/>&nbsp; <span class="font21">COVID-19 Tracker (INDIA)</span>
+  </div>
 </section>
 <router-outlet></router-outlet>
