@@ -69,20 +69,20 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "covid-tracking:build",
             "port": 4200,
-            "host": "0.0.0.0"
+            "host": "0.0.0.0",
+            "buildTarget": "covid-tracking:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "covid-tracking:build:production"
+              "buildTarget": "covid-tracking:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "covid-tracking:build"
+            "buildTarget": "covid-tracking:build"
           }
         },
         "test": {
