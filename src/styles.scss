@@ -16,15 +16,15 @@
   src: url('./assets/Archivo-Regular.ttf');
 }
 
-$covid-tracking-primary: mat.define-palette(mat.$indigo-palette);
-$covid-tracking-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$covid-tracking-warn: mat.define-palette(mat.$red-palette);
+$covid-tracking-primary: mat.m2-define-palette(mat.$m2-indigo-palette);
+$covid-tracking-accent: mat.m2-define-palette(mat.$m2-pink-palette, A200, A100, A400);
+$covid-tracking-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
-$dark-tracking-primary: mat.define-palette(mat.$pink-palette);
-$dark-tracking-accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
-$dark-tracking-warn: mat.define-palette(mat.$red-palette);
+$dark-tracking-primary: mat.m2-define-palette(mat.$m2-pink-palette);
+$dark-tracking-accent: mat.m2-define-palette(mat.$m2-green-palette, A200, A100, A400);
+$dark-tracking-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
-$covid-tracking-theme: mat.define-light-theme((
+$covid-tracking-theme: mat.m2-define-light-theme((
   color: (
     primary: $covid-tracking-primary,
     accent: $covid-tracking-accent,
@@ -32,7 +32,7 @@ $covid-tracking-theme: mat.define-light-theme((
   )
 ));
 
-$covid-tracking-theme-dark: mat.define-dark-theme((
+$covid-tracking-theme-dark: mat.m2-define-dark-theme((
   color: (
     primary: $dark-tracking-primary,
     accent: $dark-tracking-accent,
