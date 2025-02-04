@@ -2,46 +2,47 @@
   <div class="container-fluid mt-5">
     <div class="row">
       <div class="col-sm-5">
-        <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="3px" fxLayoutGap.xs="0px" class="cardsSymmetric">
-          <div fxFlex fxFlex.xs="50%">
+        <div class="cardsSymmetric">
+          <!-- <div fxFlex fxFlex.xs="50%"> -->
+          <div>
             <div class="text-center closePad" [ngClass]="{'conformBackground': isActiveConfirmed}"
-                 (click)="selectSection(1)">
+              (click)="selectSection(1)">
               <p class="font13 red1 weight500">Confirmed</p>
               <p class="font15 font-weight-bold letter-spacing-1 red2 mb-1">+{{confirmedDelta}}</p>
               <p class="weight700 font24 red1">{{confirmedTotal}}</p>
             </div>
           </div>
-          <div fxFlex fxFlex.xs="50%">
+          <!-- <div fxFlex fxFlex.xs="50%"> -->
+          <div>
             <div class="text-center closePad" [ngClass]="{'activeBackground': isActiveActive}"
-                 (click)="selectSection(2)">
+              (click)="selectSection(2)">
               <p class="font13 blue1 weight500">Active</p>
               <p class="font15 font-weight-bold letter-spacing-1 blue2 mb-1">&nbsp;{{activeDelta}}</p>
               <p class="weight700 font24 blue1">{{activeTotal}}</p>
             </div>
           </div>
-          <div fxFlex fxFlex.xs="50%">
+          <!-- <div fxFlex fxFlex.xs="50%"> -->
+          <div>
             <div class="text-center closePad" [ngClass]="{'recoveredBackground': isActiveRecovered}"
-                 (click)="selectSection(3)">
+              (click)="selectSection(3)">
               <p class="font13 green1 weight500">Recovered</p>
               <p class="font15 font-weight-bold letter-spacing-1 green2 mb-1">+{{recoveredDelta}}</p>
               <p class="weight700 font24 green1">{{recoveredTotal}}</p>
             </div>
           </div>
-          <div fxFlex fxFlex.xs="50%">
+          <!-- <div fxFlex fxFlex.xs="50%"> -->
+          <div>
             <div class="text-center closePad" [ngClass]="{'deceasedBackground': isActiveDeceased}"
-                 (click)="selectSection(4)">
+              (click)="selectSection(4)">
               <p class="font13 grey1 weight500">Deceased</p>
               <p class="font15 font-weight-bold letter-spacing-1 grey2 mb-1">+{{deceasedDelta}}</p>
               <p class="weight700 font24 grey1">{{deceasedTotal}}</p>
             </div>
           </div>
         </div>
-        <div class="mt-5" [ngClass]="{'mt-2': platform.ANDROID || platform.IOS, 'mt-5': !platform.ANDROID && !platform.IOS}">
-          <google-chart
-            *ngIf="mapReady"
-            [data]="geoChart"
-            (regionClick)="onClickRegion($event)">
-          </google-chart>
+        <div class="mt-5">
+          <!-- <google-chart *ngIf="mapReady" [data]="geoChart" (regionClick)="onClickRegion($event)">
+          </google-chart> -->
         </div>
       </div>
       <div class="col-sm-7">
@@ -56,16 +57,15 @@
               <mat-card-content>
                 <div class="allUpdatesDataContainer">
                   <div *ngFor="let news of newsUpdateData">
-                    <p class="text-muted font11 mb-1"><fa-icon [icon]="faCoffee"></fa-icon>&nbsp; {{news['timestamp'] | date:'MMM d, h:mm a'}}</p>
+                    <p class="text-muted font11 mb-1"><fa-icon [icon]="faCoffee"></fa-icon>&nbsp; {{news['timestamp'] |
+                      date:'MMM d, h:mm a'}}</p>
                     <p class="font13 font-weight-bold">{{news['update']}}</p>
                   </div>
                 </div>
               </mat-card-content>
             </mat-card>
             <div class="mt-5">
-              <google-chart
-                *ngIf="mapReady"
-                [data]="lineChart">
+              <google-chart *ngIf="mapReady" [data]="lineChart">
               </google-chart>
             </div>
           </div>
